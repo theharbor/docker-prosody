@@ -19,4 +19,7 @@ apt-get install --no-install-recommends -y prosody lua-sec lua-bitop lua-event
 # Needed until Prosody 0.10 is released
 curl --silent --show-error --location https://prosody-modules.googlecode.com/hg-history/e87678a527202cf12631983abfe5ab307e3ee468/mod_websocket/mod_websocket.lua > /usr/lib/prosody/modules/mod_websocket.lua
 
+mkdir /var/run/prosody
+chown prosody:prosody /var/run/prosody
+
 rm -rf /var/lib/apt/lists/*
